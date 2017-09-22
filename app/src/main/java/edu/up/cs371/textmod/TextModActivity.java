@@ -130,6 +130,13 @@ public class TextModActivity extends ActionBarActivity {
         }
         editText.setText(implemented);
     }
+    public void onClickSpace(View v){
+        String org = editText.getText().toString();
+        String space= org.replace(" ", "");
+
+
+        editText.setText(space);
+    }
 
 
 
