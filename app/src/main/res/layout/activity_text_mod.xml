@@ -166,6 +166,13 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <Button
+                android:id="@+id/AltCase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="Alternate"
+                android:text="AltCase" />
+
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="0sp"
