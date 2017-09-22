@@ -142,20 +142,30 @@
         android:layout_weight="1"/>
 
 
-    <LinearLayout
-        android:orientation="horizontal"
+    <Button
+        android:id="@+id/Space"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:text="Space-less"
+        android:textSize="@dimen/button_font_size"
+        android:textColor="@color/button_text_color"
+        android:background="@color/button_color"
+        android:onClick ="onClickSpace"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <Space
             android:layout_width="0sp"
             android:layout_height="match_parent"
-            android:layout_weight="10"  />
+            android:layout_weight="10" />
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <Space
                 android:layout_width="match_parent"
@@ -163,9 +173,9 @@
                 android:layout_weight="1" />
 
             <Spinner
+                android:id="@+id/spinner"
                 android:layout_width="@dimen/spinner_width"
                 android:layout_height="wrap_content"
-                android:id="@+id/spinner"
                 android:layout_weight="0"
                 android:background="@color/spinner_color" />
 
@@ -181,9 +191,9 @@
             android:layout_weight="1" />
 
         <ImageView
+            android:id="@+id/imageView"
             android:layout_width="@dimen/image_size"
             android:layout_height="@dimen/image_size"
-            android:id="@+id/imageView"
             android:src="@mipmap/kitten" />
 
         <Space
