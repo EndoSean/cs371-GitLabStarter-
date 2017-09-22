@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import java.util.ArrayList;
@@ -27,6 +28,7 @@ public class TextModActivity extends ActionBarActivity {
 
     // instance variables containing widgets
     private ImageView imageView; // the view that shows the image
+    private EditText editText;
 
     /**
      * @see android.app.Activity#onCreate(android.os.Bundle)
@@ -40,6 +42,7 @@ public class TextModActivity extends ActionBarActivity {
 
         // set instance variables for our widgets
         imageView = (ImageView)findViewById(R.id.imageView);
+        editText = (EditText) findViewById(R.id.editText);
 
         // Set up the spinner so that it shows the names in the spinner array resources
         //
@@ -102,6 +105,16 @@ public class TextModActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+    public void Reverse(View v){
+        String reverse = editText.getText().toString();
+        String implemented= "";
+
+        for(int i=1; i<reverse.length()+1; i++){
+            implemented= implemented + reverse.charAt(reverse.length()-i);
+        }
+        editText.setText(implemented);
+    }
+
 
     /**
      * class that handles our spinner's selection events
