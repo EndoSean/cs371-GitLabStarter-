@@ -35,9 +35,9 @@ public class TextModActivity extends ActionBarActivity {
     private  Spinner spinner;
     private EditText editText;
     private Button clear;
+    private Button Alternate;
     public TextModActivity() {
     }
-
 
     /**
      * @see android.app.Activity#onCreate(android.os.Bundle)
@@ -58,6 +58,8 @@ public class TextModActivity extends ActionBarActivity {
         clear = (Button) findViewById(R.id.button);
         CopyName = (Button)findViewById(R.id.NameButton);
         Textedit = (EditText)findViewById(R.id.editText);
+        Alternate = (Button)findViewById(R.id.AltCase);
+        int c=9;
 
 
 
@@ -169,5 +171,21 @@ public class TextModActivity extends ActionBarActivity {
     public void CopyName(View v) {
         String[] spinnerNames = getResources().getStringArray(R.array.spinner_names);
         Textedit.setText(Textedit.getText()+ spinnerNames[spinner.getSelectedItemPosition()]);
+    }
+    public void Alternate(View v){
+        String s = editText.getText().toString();
+        String x = "";
+        for (int i = 0; i < s.length();i++) {
+            if(i==0) {
+                x = x + s.substring(i,i+1).toUpperCase();
+            }
+            else if(i%2 == 0){
+                x = x+s.substring(i,i+1).toUpperCase();
+            }
+            else{
+                x = x+s.substring(i,i+1).toLowerCase();
+            }
+        }
+        editText.setText(x);
     }
 }
