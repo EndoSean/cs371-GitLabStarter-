@@ -38,11 +38,14 @@ public class TextModActivity extends ActionBarActivity {
     public TextModActivity() {
     }
 
+
     /**
      * @see android.app.Activity#onCreate(android.os.Bundle)
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
 
 
         // perform superclass initialization; load the layout
