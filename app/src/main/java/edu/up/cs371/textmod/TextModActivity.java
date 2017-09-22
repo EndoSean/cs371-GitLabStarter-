@@ -43,7 +43,7 @@ public class TextModActivity extends ActionBarActivity {
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        int a = 72;
+
 
         // perform superclass initialization; load the layout
         super.onCreate(savedInstanceState);
@@ -55,9 +55,7 @@ public class TextModActivity extends ActionBarActivity {
         clear = (Button) findViewById(R.id.button);
         CopyName = (Button)findViewById(R.id.NameButton);
         Textedit = (EditText)findViewById(R.id.editText);
-        int c=9;
 
-        int b=0;
 
 
         // Set up the spinner so that it shows the names in the spinner array resources
