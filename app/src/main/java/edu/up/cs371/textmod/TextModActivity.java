@@ -55,6 +55,8 @@ public class TextModActivity extends ActionBarActivity {
         CopyName = (Button)findViewById(R.id.NameButton);
         Textedit = (EditText)findViewById(R.id.editText);
 
+        int b=0;
+
         // Set up the spinner so that it shows the names in the spinner array resources
         //
         // get spinner object
