@@ -140,6 +140,7 @@ public class TextModActivity extends ActionBarActivity {
 
 
 
+
     public void onClickClear(View v) {
         String c = " ";
         editText.setText(c);
