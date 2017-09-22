@@ -141,6 +141,16 @@
         android:layout_weight="1" />
 
 
+    <Button
+        android:id="@+id/Space"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Space-less"
+        android:textSize="@dimen/button_font_size"
+        android:textColor="@color/button_text_color"
+        android:background="@color/button_color"
+        android:onClick ="onClickSpace"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -155,6 +165,13 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
+            <Button
+                android:id="@+id/AltCase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="Alternate"
+                android:text="AltCase" />
 
             <Space
                 android:layout_width="match_parent"

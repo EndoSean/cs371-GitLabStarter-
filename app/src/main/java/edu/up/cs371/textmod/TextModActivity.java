@@ -46,8 +46,6 @@ public class TextModActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
 
-
-
         // perform superclass initialization; load the layout
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_text_mod);
@@ -60,7 +58,6 @@ public class TextModActivity extends ActionBarActivity {
         Textedit = (EditText)findViewById(R.id.editText);
         Alternate = (Button)findViewById(R.id.AltCase);
         int c=9;
-
 
 
 
@@ -133,6 +130,13 @@ public class TextModActivity extends ActionBarActivity {
             implemented= implemented + reverse.charAt(reverse.length()-i);
         }
         editText.setText(implemented);
+    }
+    public void onClickSpace(View v){
+        String org = editText.getText().toString();
+        String space= org.replace(" ", "");
+
+
+        editText.setText(space);
     }
 
 
