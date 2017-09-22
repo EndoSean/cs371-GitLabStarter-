@@ -43,6 +43,7 @@ public class TextModActivity extends ActionBarActivity {
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        int a = 72;
 
         // perform superclass initialization; load the layout
         super.onCreate(savedInstanceState);
