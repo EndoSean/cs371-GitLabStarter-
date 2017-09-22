@@ -58,6 +58,7 @@ public class TextModActivity extends ActionBarActivity {
 
         int b=0;
 
+
         // Set up the spinner so that it shows the names in the spinner array resources
         //
         // get spinner object
