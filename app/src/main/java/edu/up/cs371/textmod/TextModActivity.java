@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -106,6 +107,16 @@ public class TextModActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+    public void Reverse(View v){
+        String reverse = editText.getText().toString();
+        String implemented= "";
+
+        for(int i=1; i<reverse.length()+1; i++){
+            implemented= implemented + reverse.charAt(reverse.length()-i);
+        }
+        editText.setText(implemented);
+    }
+
 
 
     public void onClickClear(View v) {
