@@ -21,7 +21,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import java.util.ArrayList;
-
+import android.widget.Button;
+import android.widget.EditText;
 public class TextModActivity extends ActionBarActivity {
 
     // array-list that contains our images to display
@@ -32,7 +33,8 @@ public class TextModActivity extends ActionBarActivity {
     private Button CopyName;
     private EditText Textedit;
     private  Spinner spinner;
-
+    private EditText editText;
+    private Button clear;
     public TextModActivity() {
     }
 
@@ -48,6 +50,8 @@ public class TextModActivity extends ActionBarActivity {
 
         // set instance variables for our widgets
         imageView = (ImageView)findViewById(R.id.imageView);
+        editText = (EditText) findViewById(R.id.editText);
+        clear = (Button) findViewById(R.id.button);
         CopyName = (Button)findViewById(R.id.NameButton);
         Textedit = (EditText)findViewById(R.id.editText);
 
@@ -112,7 +116,25 @@ public class TextModActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+    public void Reverse(View v){
+        String reverse = editText.getText().toString();
+        String implemented= "";
 
+        for(int i=1; i<reverse.length()+1; i++){
+            implemented= implemented + reverse.charAt(reverse.length()-i);
+        }
+        editText.setText(implemented);
+    }
+
+
+
+    public void onClickClear(View v) {
+        String c = " ";
+        editText.setText(c);
+
+
+
+    }
     /**
      * class that handles our spinner's selection events
      */
