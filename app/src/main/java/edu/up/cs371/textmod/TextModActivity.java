@@ -16,6 +16,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import java.util.ArrayList;
@@ -24,7 +26,8 @@ public class TextModActivity extends ActionBarActivity {
 
     // array-list that contains our images to display
     private ArrayList<Bitmap> images;
-
+    private EditText editText;
+    private Button clear;
     // instance variables containing widgets
     private ImageView imageView; // the view that shows the image
 
@@ -40,7 +43,8 @@ public class TextModActivity extends ActionBarActivity {
 
         // set instance variables for our widgets
         imageView = (ImageView)findViewById(R.id.imageView);
-
+        editText = (EditText) findViewById(R.id.editText);
+        clear = (Button) findViewById(R.id.button);
         // Set up the spinner so that it shows the names in the spinner array resources
         //
         // get spinner object
@@ -101,6 +105,15 @@ public class TextModActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+
+    public void onClickClear(View v) {
+        String c = " ";
+        editText.setText(c);
+
+
+
     }
 
     /**
