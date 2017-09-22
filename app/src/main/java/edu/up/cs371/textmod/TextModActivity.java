@@ -16,6 +16,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import java.util.ArrayList;
@@ -27,6 +29,12 @@ public class TextModActivity extends ActionBarActivity {
 
     // instance variables containing widgets
     private ImageView imageView; // the view that shows the image
+    private Button CopyName;
+    private EditText Textedit;
+    private  Spinner spinner;
+
+    public TextModActivity() {
+    }
 
     /**
      * @see android.app.Activity#onCreate(android.os.Bundle)
@@ -40,11 +48,13 @@ public class TextModActivity extends ActionBarActivity {
 
         // set instance variables for our widgets
         imageView = (ImageView)findViewById(R.id.imageView);
+        CopyName = (Button)findViewById(R.id.NameButton);
+        Textedit = (EditText)findViewById(R.id.editText);
 
         // Set up the spinner so that it shows the names in the spinner array resources
         //
         // get spinner object
-        Spinner spinner = (Spinner)findViewById(R.id.spinner);
+        spinner = (Spinner)findViewById(R.id.spinner);
         // get array of strings
         String[] spinnerNames = getResources().getStringArray(R.array.spinner_names);
         // create adapter with the strings
@@ -127,5 +137,9 @@ public class TextModActivity extends ActionBarActivity {
         public void onNothingSelected(AdapterView<?> parentView) {
             // your code here
         }
+    }
+    public void CopyName(View v) {
+        String[] spinnerNames = getResources().getStringArray(R.array.spinner_names);
+        Textedit.setText(Textedit.getText()+ spinnerNames[spinner.getSelectedItemPosition()]);
     }
 }
